@@ -108,6 +108,9 @@ main[aria-expanded="true"]{
 			width: $right-bar-width;
 			direction: $direction;
 			float: right;
+			& a{
+			   width:100%;
+			}		
 		}
 	transition: all 0.5s ease 0s;
 }
@@ -116,10 +119,16 @@ main[aria-expanded="true"]{
 }
 .right-bar[aria-expanded="false"]{
 	width:$right-bar-width/2.5;
-	& li{
-	    height:60px;
-	    ovarflow:hidden;
-	    width: $right-bar-width/2.5;
+	& .collapsible{
+		& li{
+		    height:60px;
+		    ovarflow:hidden;
+		    width: $right-bar-width/2.5;
+		    & a{
+			width:	$right-bar-width;
+			float:right;
+			}
+		}
 	}
 }
 
