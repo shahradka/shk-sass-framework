@@ -1,0 +1,160 @@
+* {
+	@include bs(border-box);
+}
+// top part of pages
+// ==================================
+nav{
+   background-color:$base-color!important;
+   direction:rtl;	
+}
+// ===================================
+
+.top-bar{
+	width: $background-width;
+	height:$top-bar-height;
+	background-color:  $base-color ;
+				& .title-area {
+					height: $top-bar-height;
+					width: $right-bar-width;
+					& li{
+				    color: inherit;
+    				line-height: 1;
+   					padding: 0.7rem 1rem;
+   					background-color:  $auro-metal-saurus;
+   					width: $right-bar-width;
+   					text-align: center;
+   					height: $top-bar-height;
+				}
+			}
+}
+.top-bar , .title-area{
+		margin: 0px;
+}
+.top-bar:before, .top-bar:after {
+    content: " ";
+    display: table;
+    flex-basis: 0;
+    order: 1;
+}
+.tob-bar-left{
+	float: left;
+}
+.top-bar-right{
+	float: right;
+}
+.top-bar-right ,.top-bar-left{
+	height: $top-bar-height;
+}
+.top-bar-section ul{
+    display: inline;
+    height: auto !important;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.top-bar-section ul li{
+	float: right;
+}
+$sumOfSize:0;
+@for $i from 6 through 1{
+	@if ($i == 6)
+	{
+		h#{$i}{
+			font-size: 30%; 	
+		}	
+	}
+	@else
+	{
+		.top-bar{
+
+ 				h#{$i}{
+					$sumOfSize : $sumOfSize + 30%;
+					font-size: $sumOfSize; 
+					color:$white-smoke;
+					}	
+			}  
+	}
+}
+// center part of pages style
+//======================================
+.center-part{
+@include right-bar-menu-width(82%);
+	& .inner{
+		padding: $gap;
+		direction: $direction;
+	}
+}
+.main-page { 
+    height: 92%;
+    width: 100%;
+    position: relative;
+    overflow:auto;
+}
+main[aria-expanded="false"]{
+	padding-right: $right-bar-width;
+    transition: all 0.25s ease 0s;
+}
+main[aria-expanded="true"]{
+	padding-right: $right-bar-width / 2; 
+    transition: all 0.25s ease 0s;
+}
+// right part of pages
+// =====================================
+
+.right-bar{
+	@extend .side-nav;
+	position: absolute!important;
+		& .inner{
+			width: $right-bar-width;
+			direction: $direction;
+			overflow: hidden;
+			float: right;
+		}
+	transition: all 0.5s ease 0s;
+}
+.right-bar[aria-expanded="true"]{
+	width:$right-bar-width;
+}
+.right-bar[aria-expanded="false"]{
+	width:$right-bar-width/2.5;
+	& li{
+	    height:60px;
+	    ovarflow:hidden;
+	    width: $right-bar-width/2.5;
+	}
+}
+
+.right-bar-toggler{
+	color: $very-dark-grey;
+    font-size: 80%;
+    line-height: 2rem;
+    cursor: $clickable-mouse!important;
+    & a{
+    	padding-right: 0px !important; 
+    	padding-left: 0px !important;
+    }
+
+}
+.right-bar-toggler[aria-expanded="true"]:after{
+	content: '>>';
+	    transition: all 0.25s ease 0s;
+
+}
+.right-bar-toggler[aria-expanded="false"]:after{
+	content: '<<';
+	    transition: all 0.25s ease 0s;
+
+}
+//======================================
+// customize marterlize framework
+//======================================
+.brand-logo{
+   background-color:$auro-metal-saurus!important;
+   padding: 0 5px!important;
+   width: $right-bar-width;
+   text-align: center;
+} 
+.right-bar .collapsible-header collection-item collection-item-active{
+	margin-right: 20px!important;
+}
+//======================================

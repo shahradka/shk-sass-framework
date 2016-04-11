@@ -1,0 +1,10 @@
+@mixin bs($bs-type) {
+-webkit-box-sizing: $bs-type;
+-moz-box-sizing: $bs-type;
+box-sizing: $bs-type;
+} 
+// default padding 
+@mixin dp($dp-amount){
+padding-right:$dp-amount;
+padding-left:$dp-amount;
+}

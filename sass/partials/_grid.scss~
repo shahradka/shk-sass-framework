@@ -1,0 +1,38 @@
+.row{
+  margin-left: -1*$gap;
+  margin-right: -1*$gap;
+  &:after{
+	    content: " ";
+	    visibility: hidden;
+	    display: block;
+	    height: 0;
+	    clear: both;
+	}
+}
+.column{
+  display: inline;
+  vertical-align:baseline;
+  padding-left: $gap;
+  padding-right: $gap;
+  float: left;
+}
+
+@for $i from 1 through $gridsize {
+
+	.column-#{$i}{
+	    width: ($i/$gridsize)* 100%;
+	}
+
+}
+
+@each $slug,$size in $breakpoints {
+	@media (max-width: #{$size}){
+		@for $i from 1 through $gridsize {
+
+			.column-#{$slug}-#{$i}{
+		    		width: ($i/$gridsize)* 100%;
+			}
+
+		}
+	}
+}

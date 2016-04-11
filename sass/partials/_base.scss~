@@ -1,0 +1,48 @@
+html,body{
+	font-size: 100%;
+}
+.left{
+  float:left;
+}
+.right{
+  float:right;
+}
+html,body{
+	height: 100%;
+}
+a {
+	@include dp;
+	color: $link-color;
+    line-height: inherit;
+    text-decoration: none;
+}
+li:not(.need-list-style){
+	list-style: none;
+}
+ul{
+	line-height: 2.6;
+	font-size: 1rem;
+	font-family: inherit;	
+}
+//auto calculate size of headline 
+$sumOfSize:0;
+@for $i from 6 through 1{
+	@if ($i == 6)
+	{
+		h#{$i}{
+			font-size: 30%; 	
+		}	
+	}
+	@else
+	{
+		h#{$i}{
+			$sumOfSize : $sumOfSize + 80%;
+			font-size: $sumOfSize; 
+		}	 
+	}
+}
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4,
+ h5, h6, pre, form, p, blockquote, th, td{
+    margin: 0;
+    padding: 0;
+ }

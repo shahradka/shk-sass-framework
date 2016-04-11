@@ -1,0 +1,197 @@
+@include font-face("fontello", font-files("fontello.ttf"));
+@include font-face("MaterialDesignIcons", font-files("MaterialDesignIcons.ttf"));
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+*/ 
+ 
+ [class^="icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin:6px;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ .icon-none:before { content: '\e881'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-approval:before { content: '\e800'; } /* 'ÃƒÂ®Ã‚Â Ã¢â€šÂ¬' */
+.icon-uniE614:before { content: '\e801'; } /* 'ÃƒÂ®Ã‚Â Ã¯Â¿Â½' */
+.icon-last-audity-supervisor-report:before { content: '\e802'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Å¡' */
+.icon-star-empty:before { content: '\e803'; } /* 'ÃƒÂ®Ã‚Â Ã†â€™' */
+.icon-lock-open:before { content: '\e804'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Å¾' */
+.icon-tag:before { content: '\e805'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Â¦' */
+.icon-star-2:before { content: '\e806'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Â ' */
+.icon-popup:before { content: '\e807'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Â¡' */
+.icon-left-open:before { content: '\e808'; } /* 'ÃƒÂ®Ã‚Â Ã‹â€ ' */
+.icon-right-open:before { content: '\e809'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Â°' */
+.icon-down-circle:before { content: '\e80a'; } /* 'ÃƒÂ®Ã‚Â Ã…Â ' */
+.icon-left-circle:before { content: '\e80b'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Â¹' */
+.icon-right-circle:before { content: '\e80c'; } /* 'ÃƒÂ®Ã‚Â Ã…â€™' */
+.icon-up-circle:before { content: '\e80d'; } /* 'ÃƒÂ®Ã‚Â Ã¯Â¿Â½' */
+.icon-cw-circle:before { content: '\e80e'; } /* 'ÃƒÂ®Ã‚Â Ã…Â½' */
+.icon-arrows-cw:before { content: '\e80f'; } /* 'ÃƒÂ®Ã‚Â Ã¯Â¿Â½' */
+.icon-trash:before { content: '\e810'; } /* 'ÃƒÂ®Ã‚Â Ã¯Â¿Â½' */
+.icon-clipboard:before { content: '\e811';} /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Ëœ' */
+.icon-home:before { content: '\e812'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬â„¢' */
+.icon-lock-open-1:before { content: '\e813'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Å“' */
+.icon-logout-1:before { content: '\e814'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬ï¿½' */
+.icon-login:before { content: '\e815'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Â¢' */
+.icon-calendar:before { content: '\e816'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬â€œ' */
+.icon-th-thumb-empty:before { content: '\e817'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬â€�' */
+.icon-th-list-1:before { content: '\e818'; } /* 'ÃƒÂ®Ã‚Â Ã‹Å“' */
+.icon-th-thumb:before { content: '\e819'; } /* 'ÃƒÂ®Ã‚Â Ã¢â€žÂ¢' */
+.icon-comment-alt:before { content: '\e81a'; } /* 'ÃƒÂ®Ã‚Â Ã…Â¡' */
+.icon-attention:before { content: '\e81b'; } /* 'ÃƒÂ®Ã‚Â Ã¢â‚¬Âº' */
+.icon-cog:before { content: '\e81c'; } /* 'ÃƒÂ®Ã‚Â Ã…â€œ' */
+.icon-logout:before { content: '\e81d'; } /* 'ÃƒÂ®Ã‚Â Ã¯Â¿Â½' */
+.icon-lock:before { content: '\e81e'; } /* 'ÃƒÂ®Ã‚Â Ã…Â¾' */
+.icon-minus-circle:before { content: '\e81f'; } /* 'ÃƒÂ®Ã‚Â Ã…Â¸' */
+.icon-plus-circle:before { content: '\e820'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â ' */
+.icon-cancel-circle:before { content: '\e821'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¡' */
+.icon-cancel:before { content: '\e822'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¢' */
+.icon-ok-circle:before { content: '\e823'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â£' */
+.icon-ok:before { content: '\e824'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¤' */
+.icon-th-list:before { content: '\e825'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¥' */
+.icon-th-large:before { content: '\e826'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¦' */
+.icon-th:before { content: '\e827'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â§' */
+.icon-pencil:before { content: '\e828'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¨' */
+.icon-heart-empty:before { content: '\e829'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â©' */
+.icon-heart:before { content: '\e82a'; } /* 'ÃƒÂ®Ã‚Â Ã‚Âª' */
+.icon-mail-1:before { content: '\e82b'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â«' */
+.icon-project_resources_list:before { content: '\e82c'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¬' */
+.icon-uniE63C:before { content: '\e82d'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â­' */
+.icon-uniE63D:before { content: '\e82e'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â®' */
+.icon-supervisor-report:before { content: '\e82f'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¯' */
+.icon-uniE641:before { content: '\e830'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â°' */
+.icon-tasks:before { content: '\e831'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â±' */
+.icon-time-progress-report:before { content: '\e87E'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â²' */
+.icon-twopages-report:before { content: '\e833'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â³' */
+.icon-uniE646:before { content: '\e834'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â´' */
+.icon-uniE647:before { content: '\e835'; } /* 'ÃƒÂ®Ã‚Â Ã‚Âµ' */
+.icon-uniE648:before { content: '\e836'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¶' */
+.icon-uniE649:before { content: '\e837'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â·' */
+.icon-gantchart-report:before { content: '\e838'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¸' */
+.icon-uniE984:before { content: '\e839'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¹' */
+.icon-search:before { content: '\e83a'; } /* 'ÃƒÂ®Ã‚Â Ã‚Âº' */
+.icon-project:before { content: '\e83b'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â»' */
+.icon-off:before { content: '\e83c'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¼' */
+.icon-mail:before { content: '\e83d'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â½' */
+.icon-user-male:before { content: '\e83e'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¾' */
+.icon-search:before { content: '\e83f'; } /* 'ÃƒÂ®Ã‚Â Ã‚Â¿' */
+.icon-uniE63A:before { content: '\e840'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â€šÂ¬' */
+.icon-uniE639:before { content: '\e841'; } /* 'ÃƒÂ®Ã‚Â¡Ã¯Â¿Â½' */
+.icon-create-supervisor-report:before { content: '\e842'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Å¡' */
+.icon-download-project-gant-MSP:before { content: '\e843'; } /* 'ÃƒÂ®Ã‚Â¡Ã†â€™' */
+.icon-replace-project-gant-MSP:before { content: '\e844'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Å¾' */
+.icon-uniE632:before { content: '\e845'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Â¦' */
+.icon-more:before { content: '\e846'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Â ' */
+.icon-project-progress-timebasket-report:before { content: '\e847'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Â¡' */
+.icon-project-progress-report:before { content: '\e848'; } /* 'ÃƒÂ®Ã‚Â¡Ã‹â€ ' */
+.icon-project_agreement:before { content: '\e849'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Â°' */
+.icon-uniE62D:before { content: '\e84a'; } /* 'ÃƒÂ®Ã‚Â¡Ã…Â ' */
+.icon-uniE62C:before { content: '\e84b'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Â¹' */
+.icon-executor-report:before { content: '\e84c'; } /* 'ÃƒÂ®Ã‚Â¡Ã…â€™' */
+.icon-onepage-report:before { content: '\e84d';
+margin-right:9px; } /* 'ÃƒÂ®Ã‚Â¡Ã¯Â¿Â½' */
+.icon-uniE629:before { content: '\e84e'; } /* 'ÃƒÂ®Ã‚Â¡Ã…Â½' */
+.icon-uniE627:before { content: '\e84f'; } /* 'ÃƒÂ®Ã‚Â¡Ã¯Â¿Â½' r*/
+.icon-uniE626:before { content: '\e850'; } /* 'ÃƒÂ®Ã‚Â¡Ã¯Â¿Â½' */
+.icon-uniE625:before { content: '\e851'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Ëœ' */
+.icon-timesheet-reports:before { content: '\e852'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬â„¢' */
+.icon-uniE610:before { content: '\e853'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Å“' */
+.icon-uniE611:before { content: '\e854'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬ï¿½' */
+.icon-uniE612:before { content: '\e855'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Â¢' */
+.icon-barchart-time-progress-report:before { content: '\e856'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬â€œ' */
+.icon-critical_path_report:before { content: '\e857'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬â€�' */
+.icon-detail-project:before { content: '\e858'; } /* 'ÃƒÂ®Ã‚Â¡Ã‹Å“' */
+.icon-project-liscens:before { content: '\e859'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â€žÂ¢' */
+.icon-summary-management-financial-report:before { content: '\e85a'; margin-right:9px; } /* 'ÃƒÂ®Ã‚Â¡Ã…Â¡' */
+.icon-uniE619:before { content: '\e85b'; } /* 'ÃƒÂ®Ã‚Â¡Ã¢â‚¬Âº' */
+.icon-uniE61A:before { content: '\e85c'; } /* 'ÃƒÂ®Ã‚Â¡Ã…â€œ' */
+.icon-cardtable:before { content: '\e85d'; } /* 'ÃƒÂ®Ã‚Â¡Ã¯Â¿Â½' */
+.icon-uniE61C:before { content: '\e85e'; } /* 'ÃƒÂ®Ã‚Â¡Ã…Â¾' */
+.icon-uniE61D:before { content: '\e85f'; } /* 'ÃƒÂ®Ã‚Â¡Ã…Â¸' */
+.icon-uniE61E:before { content: '\e860'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â ' */
+.icon-uniE61F:before { content: '\e861'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â¡' */
+.icon-financial_report:before { content: '\e862'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â¢' */
+.icon-financial_sorce:before { content: '\e863'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â¢' */
+.icon-project_resources_list:before { content: '\e82C'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â£' */
+.icon-pay:before { content: '\e864'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â¤' */
+.icon-project_summary_report:before { content: '\e865'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â¥' */
+.icon-cross:before { content: '\e866'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â¦' */
+.icon-treeview:before { content: '\e867'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â§' */
+.icon-tableview:before { content: '\e868'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â¨' */
+.icon-panelview:before { content: '\e869'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â©' */
+.icon-catview:before { content: '\e86a'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Âª' */
+.icon-uniE60A:before { content: '\e86b'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â«' */
+.icon-paytoproject:before { content: '\e86c'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â¬' */
+.icon-uniE608:before { content: '\e86d'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â­' */
+.icon-key:before { content: '\e86e'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â®' */
+.icon-filterBtn:before { content: '\e86f'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â¯' */
+.icon-exit:before { content: '\e870'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â°' */
+.icon-uniE604:before { content: '\e871'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â±' */
+.icon-managerreports:before { content: '\e872'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â²' */
+.icon-uniE602:before { content: '\e873'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â³' */
+.icon-projects-sort:before { content: '\e874'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-info:before { content: '\e875'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-adobe-pdf:before { content: '\e876'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-ms-excel:before { content: '\e877'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-all-projects-approval:before { content: '\e87D'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-all-onepages-reports:before { content: '\e885'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-all-twopages-reports:before { content: '\e87B'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-all-customize-reports:before { content: '\e884'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-all-financial-reports:before { content: '\e87C'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-all-summary-management-financial-reports:before { content: '\e880'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-all-last-supervisor-reports:before { content: '\e883'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-all-supervisor-reports:before { content: '\e87A'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-all-barchart-time-progress-report:before { content: '\e882'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-project-supervisions-list:before { content: '\e886'; } /* 'ÃƒÂ®Ã‚Â¡Ã‚Â´' */
+.icon-scissors:before { content: '\e887'; } /* '' */
+.icon-paste:before { content: '\e888'expandAll(); } /* '' */
+.icon-cog-1:before { content: '\e889'; } /* '' */
+.icon-print:before { content: '\e88a'; } /* '' */
+.icon-download:before { content: '\e88b'; } /* '' */
+.icon-workFlow:before { content: '\e88c'; } /* '' */
+.icon-help:before { content: '\e88d'; } /* '' */
+.icon-pin:before { content: '\e88e'; } /* '' */
+.icon-sand-timer:before { content: '\e832'; } /* '' */
+.icon-chevron-down:before { content: '\e88f'; } /* '' */
+.icon-chevron-up:before { content: '\e890'; } /* '' */
+.icon-preview:before { content: '\e890'; } /* '' */
+.icon-draft:before { content: '\e894'; } /* '' */
+.icon-expand:before { content: '\e892'; } /* '' */
+.icon-shrink:before { content: '\e891'; } /* '' */
+.icon-copy:before { content: '\e893'; } /* '' */
+.icon-save:before { content: '\e895'; } /* '' */
+.icon-persist:before { content: '\e896'; } /* '' */
+.icon-save-draft:before { content: '\e895'; } /* '' */
+.icon-info-cirle:before { content: '\e897'; } /* '' */
+.icon-segma:before { content: '\e898'; } /* '' */
+
+

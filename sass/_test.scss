@@ -1,0 +1,10 @@
+$newColor :((shk,red)
+(tgs,green)
+(majid,blue)
+(omid,black)
+);
+@each $name,$color in $newColor{
+	 .my_#{$name}{
+		background-color:$color;
+	}  
+}
