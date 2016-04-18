@@ -62,7 +62,7 @@
     position:relative;
 }
 .dropdown-button:after{
-   @include css-triangle(5px,#FFF, top);
+   @include css-triangle(5px,#FFF, top,true);
    position:absolute;
    top: $navbar-height/2;
    left: 3px;

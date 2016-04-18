@@ -14,9 +14,11 @@ padding-left:$dp-amount;
 // $triangle-size - Used to set border-size. No default, set a px or em size.
 // $triangle-color - Used to set border-color which makes up triangle. No default
 // $triangle-direction - Used to determine which direction triangle points. Options: top, bottom, left, right
-@mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
+@mixin css-triangle($triangle-size, $triangle-color, $triangle-direction,$in-after) {
   border: inset $triangle-size;
-  content: "";
+  @if ($in-after){
+ 	 content: "";
+  }
   display: block;
   height: 0;
   width: 0;

@@ -106,7 +106,7 @@ nav {
       }
 
       &:hover:not(.not-hover) {
-        background-color: rgba(0,0,0,.1);
+        background-color: ligthen( $base-color ,300%);
       }
     }
 
@@ -178,4 +178,14 @@ nav {
 }
 .custom-brand-logo:hover{
     background-color:darken($auro-metal-saurus , 5%)
+    
+}
+.custom-brand-logo.not-hover.dropdown-button:after{
+    display:none;
+}
+.custom-brand-logo:hover.not-hover.dropdown-button:after{
+    display:block;
+}
+.custom-brand-logo:focus.not-hover.dropdown-button:after{
+    display:block;
 }

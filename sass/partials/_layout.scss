@@ -85,18 +85,16 @@ $sumOfSize:0;
 	}
 }
 .main-page { 
-    height: 92%;
     width: 100%;
     position: relative;
-    overflow:auto;
 }
 main[aria-expanded="false"]{
 	padding-right: $right-bar-width;
-    transition: all 0.25s ease 0s;
+
 }
 main[aria-expanded="true"]{
 	padding-right: $right-bar-width / 2; 
-    transition: all 0.25s ease 0s;
+
 }
 // right part of pages
 // =====================================
@@ -118,12 +116,19 @@ main[aria-expanded="true"]{
 	width:$right-bar-width;
 }
 .right-bar[aria-expanded="false"]{
-	width:$right-bar-width/2.5;
+		    width:$right-bar-width/2.5;
 	& .collapsible{
 		& li{
-		    height:60px;
-		    ovarflow:hidden;
-		    width: $right-bar-width/2.5;
+		    width:$right-bar-width/2.5;
+		    height:64px;
+		    overflow: hidden;
+		    &.active{ 
+				&:hover{
+				height:auto;
+				width:$right-bar-width;
+				overflow:visible;
+			    }
+			}
 		    & a{
 			width:	$right-bar-width;
 			float:right;
@@ -135,23 +140,28 @@ main[aria-expanded="true"]{
 .right-bar-toggler{
 	color: $very-dark-grey;
     font-size: 80%;
-    line-height: 2rem;
+    line-height: 2rem!important;
     cursor: $clickable-mouse!important;
+	text-align:center!important;
     & a{
     	padding-right: 0px !important; 
     	padding-left: 0px !important;
     }
 
 }
+.right-bar-toggler[aria-expanded="true"]{
+       width:$right-bar-width!important; 
+}
+.right-bar-toggler[aria-expanded="false"]{
+       width:$right-bar-width / 4!important; 
+}
 .right-bar-toggler[aria-expanded="true"]:after{
-	content: '>>';
-	    transition: all 0.25s ease 0s;
+	content: '<<';
+
 
 }
 .right-bar-toggler[aria-expanded="false"]:after{
-	content: '<<';
-	    transition: all 0.25s ease 0s;
-
+	content: '>>';
 }
 //======================================
 // customize marterlize framework

@@ -34,7 +34,6 @@
             object.parent().removeClass('active');
         }
         if (object.parent().hasClass('active')){
-        	console.log("running");
           object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350,  queue: false, complete: function() {$(this).css('height', '');}});
         }
         else{

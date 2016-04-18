@@ -555,6 +555,7 @@ td, th{
     &:not(.active) {
       &:hover {
         background-color: $collection-hover-bg-color;
+	color: $white-smoke !important;
       }
     }
   }
@@ -588,7 +589,7 @@ td, th{
 
 // Badges
 span.badge {
-  min-width: 3rem;
+  //min-width: 3rem;
   padding: 0 6px;
   text-align: center;
   font-size: 1rem;
@@ -615,9 +616,8 @@ nav ul a span.badge {
     line-height: 1;
     margin-left: 4px;
     position: absolute;
-    right: 30px;
-    top: 41px;
-    width: 30px;
+    right: 11px;
+    top: 35px;
 }
 
 // Responsive Videos
