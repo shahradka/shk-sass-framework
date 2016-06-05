@@ -354,7 +354,7 @@ footer.page-footer {
     @extend .light;
   }
 }
-
+/*
 // Tables
 table, th, td {
    border: none;
@@ -461,6 +461,7 @@ td, th{
     tr { padding: 0 10px; }
 
     /* sort out borders */
+    /*
     thead {
       border: 0;
       border-right: 1px solid $table-border-color;
@@ -476,7 +477,13 @@ td, th{
   }
 
 }
-
+*/
+.treeTable td{
+	padding:0px;
+}
+table td {
+		padding:18px;
+    }
 
 // Collections
 .collection {

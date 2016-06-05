@@ -20,8 +20,8 @@ padding-left:$dp-amount;
  	 content: "";
   }
   display: block;
-  height: 0;
-  width: 0;
+  height: 0!important;
+  width: 0!important;
   @if ($triangle-direction == top) {
     border-color: $triangle-color transparent transparent transparent;
     border-top-style: solid;

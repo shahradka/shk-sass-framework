@@ -75,6 +75,9 @@ $sumOfSize:0;
 			}  
 	}
 }
+.empty-notification{
+	color: $emerald ;
+}
 // center part of pages style
 //======================================
 .center-part{
@@ -108,35 +111,58 @@ main[aria-expanded="true"]{
 			float: right;
 			& a{
 			   width:100%;
-			}		
+			   position:relative;
+
+			}
+			& .search-bar{
+				width:$right-bar-width;
+				&:hover{
+					background-color:$platinum;
+				}
+			} 
 		}
 	transition: all 0.5s ease 0s;
 }
 .right-bar[aria-expanded="true"]{
-	width:$right-bar-width;
+	width:$right-bar-width;			
+			
 }
 .right-bar[aria-expanded="false"]{
 		    width:$right-bar-width/2.5;
-	& .collapsible{
-		& li{
-		    width:$right-bar-width/2.5;
-		    height:64px;
-		    overflow: hidden;
-		    &.active{ 
-				&:hover{
-				height:auto;
-				width:$right-bar-width;
-				overflow:visible;
-			    }
+		& .collapsible
+	   {
+			& li{
+				height:64px; 
+				overflow: hidden;
+				width:$right-bar-width/2.5;
+				&.active
+				{ 
+					&:hover{
+					height:auto;
+					overflow:visible;
+					}
+				}
 			}
-		    & a{
-			width:	$right-bar-width;
-			float:right;
+		    & div
+		    {
+				 width:$right-bar-width;
 			}
 		}
-	}
+		& .hide-show-overflow 
+		{
+		    overflow: hidden;
+			width: $right-bar-width/2.5;
+				&:hover{
+					overflow:visible;
+				}
+		}
 }
-
+.right-bar[aria-expanded="false"] li:hover{
+	overflow:visible!important;
+		& .collapsible-header>a{
+						background-color: $platinum;
+					}
+}
 .right-bar-toggler{
 	color: $very-dark-grey;
     font-size: 80%;
@@ -163,6 +189,16 @@ main[aria-expanded="true"]{
 .right-bar-toggler[aria-expanded="false"]:after{
 	content: '>>';
 }
+.collapsible-header {
+
+	& .search-item{
+		width:$right-bar-width / 2.5;
+		
+	
+	}
+
+}
+
 //======================================
 // customize marterlize framework
 //======================================
