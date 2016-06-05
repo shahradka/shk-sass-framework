@@ -90,10 +90,23 @@
 .right-bar.collapsible-header{
 	margin:0px !important;
 } 
-.has-child{ 
-    @include css-triangle(5px, red , 'top',false);
-    left: 9px;
+.active{
+
+	& .has-child{
+	    left: -9px;
+		transform: rotate(180deg);
+
+	}
+}
+.has-child {
+    left: 0;
     position: absolute;
-    top: 30px;
-    
+    top: 0;
+    width: 42px !important;
+}
+.has-child{
+
+	& i{
+		font-size: 10pt;	
+	}
 }
